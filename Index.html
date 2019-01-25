@@ -1,0 +1,57 @@
+<!
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Multiplication and division javascript program</title>
+    <link rel="stylesheet" href="style.css">
+    <!--Bootstrap links-->
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+
+</head>
+   <body>
+
+   <div class="container">
+        <form>
+            <br>
+            <br>
+            <label for="Enter first number"> Enter first number</label>
+            <input type="text" id="firstNumber" style="text-align: center ; color: green">
+            <br>
+            <br>
+            <br>
+            <label for="Enter second number" >Enter second number</label>
+            <input type="text" id="secondNumber" style="text-align: center ; color: green">
+            <br>
+            <br>
+            <br>
+            <input type="button" onclick="multiply()" value="multiply result" style="text-align: center ; color: blue; background-color:greenyellow ">
+            <br>
+            <br>
+            <br>
+            <input type="button" onclick="divide()" value="divide result" style="text-align: center ; color: blue; background-color:greenyellow ">
+        </form>
+         <br>
+         <span>The result is:</span>
+         <br>
+         <br>
+       <span id="Result" style="color:indianred;"></span>
+   </div>
+        <script>
+            /*define two global variables*/
+            var firstNum= document.getElementById("firstNumber") ,
+                secondNum= document.getElementById("secondNumber");
+
+            /*define multipication function*/
+            function multiply() {
+                document.getElementById("Result").innerHTML= firstNum.value*secondNum.value;
+            }
+
+            /*define division function*/
+            function divide() {
+                document.getElementById("Result").innerHTML= firstNum.value / secondNum.value;
+            }
+        </script>
+   </body>
+</html>
+
